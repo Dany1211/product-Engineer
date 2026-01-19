@@ -31,7 +31,7 @@ export default function Hero() {
             <div className="absolute bottom-32 right-12 text-black/20 font-mono text-xs hidden md:block">+ CORDS: 118.2437° W</div>
 
             {/* Content Container */}
-            <div className="max-w-[1600px] mx-auto w-full px-6 md:px-12 relative z-10 flex-grow flex flex-col justify-center">
+            <div className="max-w-[1400px] mx-auto w-full px-6 md:px-12 relative z-10 flex-grow flex flex-col justify-center">
 
                 {/* Top Bar / Quick Links */}
                 <motion.div

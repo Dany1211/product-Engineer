@@ -44,20 +44,23 @@ export const projects = [
 export const experience = [
   {
     company: "Hungy Inc.",
-    role: "SWE Intern (The One Who Shipped)",
-    period: "Oct 2025 – Dec 2025",
-    description: [
-      "Built the entire push notification system. Server-driven, event-based. Works whether the app is open or dead.",
-      "Offline-first architecture. Local persistence. Background sync. Data integrity is my middle name.",
-      "Deployed Docker microservices and AI agents. Handled SQL-less pipelines. Basically, I did the hard stuff."
+    role: "SDE Intern",
+    period: "Oct 2025 – Dec 2025 | New Brunswick, Canada (Remote)",
+    description: "Architected server-driven push notification workflows and offline-first data sync for iOS and Android. Deployed Docker microservices and AI agents for automated data processing.",
+    achievements: [
+      "Built server-driven, event-based push notification system for reliable delivery.",
+      "Implemented offline-first architecture with local persistence and background sync.",
+      "Deployed Docker microservices and AI agents for SQL-less data access."
     ]
   },
   {
-    company: "AICC",
-    role: "Competition Team Co-head",
-    period: "Jun 2025 – Present",
-    description: [
-      "Leading teams. Organizing chaos. Making sure competitions don't crash and burn."
+    company: "Freelance",
+    role: "Full Stack Developer",
+    period: "2024 – 2025",
+    description: "Executed end-to-end development for diverse clients, delivering high-performance web and mobile solutions.",
+    achievements: [
+      "Successfully shipped 7+ projects, ranging from MVP launches to scalable business tools.",
+      "Managed full project lifecycle, from requirement gathering to deployment and maintenance."
     ]
   }
 ];
@@ -65,19 +68,15 @@ export const experience = [
 export const achievements = [
   {
     title: "Rackathon 2025 Winner",
-    description: "First place. Obviously."
+    description: "First place victory at Rackathon 2025, demonstrating rapid prototyping and effective problem-solving under pressure."
   },
   {
     title: "Hackbyte 2.0 Winner",
-    description: "Prize winner at IIIT Jabalpur. Another trophy for the shelf."
+    description: "Social Media Track Prize winner at IIIT Jabalpur, recognized for innovative social graph implementation."
   },
   {
     title: "Codelite Top 5",
-    description: "Pune University. Top tier performance."
-  },
-  {
-    title: "Certifications",
-    description: "The Complete 2024 Web Development Bootcamp. I know the basics, and then I know everything else."
+    description: "Secured top 5 position at Pune University Codelite competition among hundreds of participants."
   }
 ];
 

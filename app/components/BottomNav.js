@@ -10,7 +10,7 @@ export default function BottomNav() {
 
     const tabs = [
         { id: "home", label: "Home", icon: Sparkles, href: "#home" },
-        { id: "experience", label: "Credits", icon: User, href: "#experience" },
+        { id: "experience", label: "Experience", icon: User, href: "#experience" },
         { id: "projects", label: "Work", icon: Briefcase, href: "#projects" },
         { id: "contact", label: "Contact", icon: Mail, href: "#contact" },
     ];
@@ -47,25 +47,39 @@ export default function BottomNav() {
     };
 
     return (
-        <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
-            <div className="flex items-center gap-1 p-1.5 rounded-full backdrop-blur-md border border-zinc-300/50 shadow-lg shadow-black/10" style={{ backgroundColor: 'rgba(216, 215, 213, 0.85)' }}>
+        <div className="fixed bottom-12 left-1/2 -translate-x-1/2 z-50">
+            <div
+                className="
+        flex items-center gap-1 p-2 rounded-full
+        bg-black/85 backdrop-blur-2xl
+        border border-white/10
+        shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_0_40px_rgba(99,102,241,0.25)]
+      "
+            >
                 {tabs.map((tab) => (
                     <button
                         key={tab.id}
                         onClick={(e) => handleClick(e, tab.href)}
                         className={cn(
-                            "relative px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 outline-none flex items-center gap-2",
-                            activeTab === tab.id ? "text-zinc-900" : "text-zinc-600 hover:text-zinc-900"
+                            "relative px-5 py-2.5 rounded-full text-sm font-semibold transition-all",
+                            activeTab === tab.id
+                                ? "text-black"
+                                : "text-zinc-400 hover:text-white"
                         )}
                     >
                         {activeTab === tab.id && (
                             <motion.div
                                 layoutId="nav-pill"
-                                className="absolute inset-0 bg-white/80 rounded-full shadow-sm"
-                                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                                className="
+                absolute inset-0 rounded-full
+                bg-white
+                shadow-[0_0_25px_rgba(99,102,241,0.6)]
+              "
+                                transition={{ type: "spring", stiffness: 350, damping: 26 }}
                             />
                         )}
-                        <span className="relative z-10 flex items-center gap-2 pt-px">
+
+                        <span className="relative z-10 flex items-center gap-2">
                             <tab.icon className="w-4 h-4" />
                             <span className="hidden sm:inline">{tab.label}</span>
                         </span>
@@ -74,4 +88,6 @@ export default function BottomNav() {
             </div>
         </div>
     );
+
+
 }
