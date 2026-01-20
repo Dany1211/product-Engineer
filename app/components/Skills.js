@@ -1,40 +1,79 @@
 "use client";
+import React from 'react';
 import Section from './Section';
 import { skills } from '../data/content';
 import { motion } from 'framer-motion';
 
 export default function Skills() {
     return (
-        <Section id="skills" className="py-24">
-            <div className="max-w-5xl mx-auto">
-                <h2 className="text-sm font-mono uppercase tracking-widest text-zinc-500 mb-12">Technical Arsenal</h2>
+        <Section id="skills" className="relative bg-white py-24 border-b border-zinc-100 overflow-hidden">
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+            {/* Subtle Grain/Dot Pattern Background */}
+            <div className="absolute inset-0 opacity-[0.4] pointer-events-none"
+                style={{ backgroundImage: 'radial-gradient(#e5e7eb 1px, transparent 1px)', backgroundSize: '24px 24px' }}
+            />
+
+            <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
+
+                {/* Minimal Header */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-16"
+                >
+                    <h2 className="text-sm font-bold tracking-[0.2em] uppercase text-zinc-400 mb-4">
+                        Capabilities
+                    </h2>
+                    <h3 className="text-4xl md:text-5xl font-serif text-zinc-900 leading-tight">
+                        My Technical <span className="italic text-zinc-500">Arsenal</span>
+                    </h3>
+                </motion.div>
+
+                {/* Grid Layout */}
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-12 md:gap-y-0">
                     {Object.entries(skills).map(([category, items], index) => (
-                        <motion.div
-                            key={category}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1, duration: 0.6 }}
-                        >
-                            <h3 className="text-lg font-serif capitalize text-zinc-900 mb-6 border-b border-zinc-200 pb-2">
-                                {category}
-                            </h3>
+                        <div key={category} className="flex flex-col gap-6">
+
+                            {/* Category Header with Accent Line */}
+                            <div className="flex items-center gap-3">
+                                <span className={`w-8 h-[1px] ${getAccentColor(index)}`} />
+                                <h4 className="text-sm font-semibold uppercase tracking-wider text-zinc-900">
+                                    {category}
+                                </h4>
+                            </div>
+
+                            {/* Skill Badges (Tag Cloud) */}
                             <div className="flex flex-wrap gap-2">
-                                {items.map((skill) => (
-                                    <span
-                                        key={skill}
-                                        className="px-3 py-1 bg-zinc-100 text-zinc-600 text-sm rounded-md font-mono hover:bg-zinc-900 hover:text-white transition-colors cursor-default"
-                                    >
-                                        {skill}
-                                    </span>
+                                {items.map((skill, i) => (
+                                    <SkillBadge key={skill} skill={skill} index={i} />
                                 ))}
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>
         </Section>
+    );
+}
+
+// Helper for accent colors per column
+function getAccentColor(index) {
+    const colors = ['bg-blue-500', 'bg-purple-500', 'bg-emerald-500', 'bg-orange-500'];
+    return colors[index % colors.length];
+}
+
+function SkillBadge({ skill, index }) {
+    return (
+        <motion.span
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.05, duration: 0.3 }}
+            whileHover={{ scale: 1.05, backgroundColor: "#18181b", color: "#ffffff", borderColor: "#18181b" }}
+            className="px-4 py-2 bg-white border border-zinc-200 rounded-full text-zinc-600 text-sm font-medium cursor-default transition-all duration-300 shadow-sm hover:shadow-md"
+        >
+            {skill}
+        </motion.span>
     );
 }
