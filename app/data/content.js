@@ -5,8 +5,8 @@ export const personalInfo = {
   status: "Deploying to Prod",
   social: {
     email: "dnyanesh2442@gmail.com",
-    github: "https://github.com/your-github",
-    linkedin: "https://linkedin.com/in/your-linkedin"
+    github: "https://github.com/Dany1211",
+    linkedin: "https://www.linkedin.com/in/danymulay/"
   },
   stats: [
     { label: "Projects Shipped", value: "50+" },
