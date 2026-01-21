@@ -3,7 +3,7 @@ import Link from 'next/link';
 import CustomCursor from './components/CustomCursor';
 import BottomNav from './components/BottomNav';
 import Hero from './components/Hero';
-import WorkGallery from './components/WorkGallery';
+import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
@@ -19,7 +19,7 @@ export default function Home() {
         <Hero />
         <Experience />
         <Skills />
-        <WorkGallery />
+        <Projects />
         <Contact />
         <Footer />
       </main>
