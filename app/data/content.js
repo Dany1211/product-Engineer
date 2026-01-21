@@ -81,8 +81,8 @@ export const achievements = [
 ];
 
 export const skills = {
-  web: ["Typescript", "ReactJS", "TailwindCSS", "GSAP", "Next.js"],
-  mobile: ["React Native", "Expo", "TypeScript"],
-  backend: ["Docker", "n8n", "MongoDB", "PostgreSQL", "LangChain"],
-  tools: ["Git", "Cursor", "Vercel", "AI Tools"]
+  web: ["TypeScript", "ReactJS", "TailwindCSS", "GSAP Animation", "ScrollTrigger", "Vite", "Gen AI"],
+  mobile: ["TypeScript", "React Native", "Expo", "Redux", "Zustand"],
+  backend: ["MongoDB", "Axios", "Postman", "API Management", "Prisma", "BaaS", "JWT"],
+  tools: ["Git", "Vercel", "Expo CLI", "Cursor", "AI tools", "n8n", "Docker", "LangChain"]
 };
