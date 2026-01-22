@@ -117,10 +117,37 @@ function Card({ i, project, progress, range, targetScale }) {
                         </div>
                     </div>
 
-                    <a href={project.link || "#"} className="pointer-events-auto inline-flex items-center gap-2 text-white hover:text-blue-400 transition-colors w-fit group">
-                        <span className="text-sm font-medium">View Project</span>
-                        <ArrowUpRight size={18} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
-                    </a>
+                    <div className="flex gap-4">
+                        {project.links?.github && (
+                            <a
+                                href={project.links.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="pointer-events-auto inline-flex items-center gap-2 text-white hover:text-blue-400 transition-colors w-fit group"
+                            >
+                                <span className="text-sm font-medium">Source Code</span>
+                                <ArrowUpRight size={18} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
+                            </a>
+                        )}
+                        {project.links?.live && (
+                            <a
+                                href={project.links.live}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="pointer-events-auto inline-flex items-center gap-2 text-white hover:text-green-400 transition-colors w-fit group"
+                            >
+                                <span className="text-sm font-medium">Live Demo</span>
+                                <ArrowUpRight size={18} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
+                            </a>
+                        )}
+                        {/* Fallback for old link structure if it exists */}
+                        {project.link && !project.links && (
+                            <a href={project.link} className="pointer-events-auto inline-flex items-center gap-2 text-white hover:text-blue-400 transition-colors w-fit group">
+                                <span className="text-sm font-medium">View Project</span>
+                                <ArrowUpRight size={18} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
+                            </a>
+                        )}
+                    </div>
                 </div>
 
                 {/* Visual Section - Abstract Representation since no images */}
