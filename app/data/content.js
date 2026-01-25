@@ -21,7 +21,13 @@ export const projects = [
     description:
       "Offline-first grievance reporting built for unreliable connectivity. Reports are queued locally, synced in the background, and tracked through event-driven pipelines. Separate user and admin workflows with audit trails, status transitions, and notification triggers. Designed to work when networks don’t.",
     type: "Mobile",
-    tech: ["React Native", "Offline-First", "Event-Driven Architecture"],
+    tech: [
+      "React Native",
+      "Expo",
+      "SQLite",
+      "Expo Background Fetch",
+      "Expo Notifications"
+    ],
     links: {
       github: "https://github.com/Dany1211/report_IT"
     }
@@ -31,7 +37,12 @@ export const projects = [
     description:
       "AI-assisted agriculture support platform. Enables crop disease analysis via image uploads, fertilizer tracking, and agri-market insights. Includes a guided chatbot that answers real farmer queries instead of dumping generic responses.",
     type: "Web",
-    tech: ["React.js", "Gen AI", "Computer Vision"],
+    tech: [
+      "React.js",
+      "OpenAI API",
+      "TensorFlow.js",
+      "REST APIs"
+    ],
     links: {
       live: "https://kisanai.vercel.app"
     }
@@ -41,7 +52,11 @@ export const projects = [
     description:
       "Career guidance platform built for students who are tired of vague advice. AI-powered chatbots simulate mentor-like interactions, backed by structured flows, smart search, and a clean, distraction-free UI.",
     type: "Web",
-    tech: ["React.js", "OpenAI API", "Framer Motion"],
+    tech: [
+      "React.js",
+      "OpenAI API",
+      "Framer Motion"
+    ],
     links: {
       live: "https://pathfindrr.vercel.app"
     }
@@ -51,12 +66,18 @@ export const projects = [
     description:
       "Cross-platform medicine reminder app using time-based notifications. Secure authentication, real-time data storage, and zero tolerance for missed alerts. Built for people who forget — not for demos.",
     type: "Mobile",
-    tech: ["Expo", "Firebase", "Notifications"],
+    tech: [
+      "Expo",
+      "Firebase Authentication",
+      "Cloud Firestore",
+      "Expo Notifications"
+    ],
     links: {
       github: "https://github.com/Dany1211/Medicine-Tracker"
     }
   }
 ];
+
 
 export const experience = [
   {
