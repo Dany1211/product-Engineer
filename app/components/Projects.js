@@ -6,24 +6,43 @@ import { ArrowUpRight, Github, ExternalLink } from 'lucide-react';
 
 export default function Projects() {
     const containerRef = useRef(null);
+    const [isMobile, setIsMobile] = React.useState(false);
+
+    React.useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     const { scrollYProgress } = useScroll({
         target: containerRef,
+        offset: ["start start", "end end"]
     });
 
     const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
     return (
-        <section ref={containerRef} id="projects" className="relative h-[300vh] bg-black">
+        <section
+            ref={containerRef}
+            id="projects"
+            className={`relative bg-black ${isMobile ? 'h-auto py-20' : 'h-[300vh]'}`}
+        >
             {/* Background - Fluid Deep Aurora */}
             <div className="fixed inset-0 pointer-events-none z-0">
                 <div className="absolute top-[-10%] right-[-10%] w-[60vw] h-[60vw] bg-purple-900/10 rounded-full blur-[120px] opacity-20 animate-pulse" />
                 <div className="absolute bottom-[10%] left-[-10%] w-[60vw] h-[60vw] bg-blue-900/10 rounded-full blur-[120px] opacity-20 animate-pulse" style={{ animationDelay: '2s' }} />
             </div>
 
-            <div className="sticky top-0 h-screen flex items-center overflow-hidden">
-                <motion.div style={{ x }} className="flex gap-16 px-24 w-max">
+            <div className={`${isMobile ? 'relative min-h-screen flex flex-col' : 'sticky top-0 h-screen flex items-center overflow-hidden'}`}>
+                <motion.div
+                    style={isMobile ? {} : { x }}
+                    className={`${isMobile ? 'flex flex-col pb-24 px-6 w-full' : 'flex gap-16 px-24 w-max'}`}
+                >
                     {/* Intro Card */}
-                    <div className="min-w-[400px] md:min-w-[600px] h-[70vh] flex flex-col justify-center gap-8 pl-12">
+                    <div className={`${isMobile ? 'w-full min-h-[50vh] flex flex-col justify-center gap-6' : 'min-w-[400px] md:min-w-[600px] h-[70vh] flex flex-col justify-center gap-8 pl-12'}`}>
                         <motion.span
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -32,7 +51,7 @@ export default function Projects() {
                         >
                             Selected Work
                         </motion.span>
-                        <h2 className="text-6xl md:text-8xl font-bold text-white leading-[0.9]">
+                        <h2 className={`font-bold text-white leading-[0.9] ${isMobile ? 'text-5xl' : 'text-6xl md:text-8xl'}`}>
                             Featured <br />
                             <span className="text-zinc-500">Projects.</span>
                         </h2>
@@ -43,7 +62,7 @@ export default function Projects() {
 
                     {/* Project Cards */}
                     {projects.map((project, index) => (
-                        <ProjectCard key={index} project={project} index={index} />
+                        <ProjectCard key={index} project={project} index={index} isMobile={isMobile} />
                     ))}
                 </motion.div>
             </div>
@@ -51,9 +70,19 @@ export default function Projects() {
     );
 }
 
-function ProjectCard({ project, index }) {
+function ProjectCard({ project, index, isMobile }) {
     return (
-        <div className="group relative min-w-[350px] md:min-w-[600px] h-[60vh] md:h-[70vh] flex flex-col justify-between bg-zinc-900/40 border border-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-12 overflow-hidden transition-all duration-500 hover:border-white/10 hover:bg-zinc-900/60">
+        <div
+            className={`group relative flex flex-col justify-between bg-zinc-900/90 border border-white/5 backdrop-blur-md rounded-3xl overflow-hidden transition-all duration-500 hover:border-white/10 hover:bg-zinc-900/95 shadow-2xl
+            ${isMobile
+                    ? 'w-full min-h-[50vh] p-6 sticky'
+                    : 'min-w-[350px] md:min-w-[600px] h-[60vh] md:h-[70vh] p-8 md:p-12'
+                }`}
+            style={isMobile ? {
+                top: `${15 + index * 5}vh`,
+                marginBottom: '5vh'
+            } : {}}
+        >
             {/* Gradient Blob for mood */}
             <div className={`absolute -right-20 -top-20 w-64 h-64 bg-gradient-to-br from-blue-500/10 to-purple-500/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
 
