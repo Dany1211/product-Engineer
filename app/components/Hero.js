@@ -56,6 +56,8 @@ export default function Hero() {
                     </a>
                     <a
                         href="/resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="group flex items-center gap-2 px-4 py-2 bg-zinc-900 text-white text-xs font-mono uppercase tracking-wider hover:bg-zinc-800 transition-all shadow-lg shadow-zinc-900/20"
                     >
                         <FileText className="w-3 h-3" />
