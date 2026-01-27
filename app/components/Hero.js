@@ -70,7 +70,7 @@ export default function Hero() {
                     {/* LEFT COLUMN: Main Typography & Mission */}
                     <div className="flex-1 flex flex-col justify-center relative">
                         {/* Title Group */}
-                        <div className="space-y-[-1vw] mb-12 relative">
+                        <div className="space-y-[-2vw] mb-12 relative z-20">
                             <motion.div
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
@@ -78,7 +78,7 @@ export default function Hero() {
                                 className="flex items-center gap-2 text-zinc-400 font-mono text-xs tracking-widest uppercase mb-4"
                             >
                                 <Cpu className="w-3 h-3" />
-                                <span>Schematic v4.0</span>
+                                <span>Schematic v8.0 // RUDE_MODE</span>
                             </motion.div>
 
                             <div className="overflow-hidden">
@@ -86,7 +86,7 @@ export default function Hero() {
                                     initial={{ y: "100%" }}
                                     animate={{ y: 0 }}
                                     transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-                                    className="text-[10vw] lg:text-[8vw] leading-none font-serif font-medium tracking-tighter text-zinc-900 mix-blend-multiply"
+                                    className="text-[10vw] lg:text-[8vw] leading-none font-sans font-black tracking-tighter text-zinc-900 mix-blend-multiply italic"
                                 >
                                     ARCHITECTING
                                 </motion.h1>
@@ -103,7 +103,7 @@ export default function Hero() {
                                     initial={{ y: "100%" }}
                                     animate={{ y: 0 }}
                                     transition={{ duration: 0.8, delay: 0.1, ease: [0.76, 0, 0.24, 1] }}
-                                    className="text-[10vw] lg:text-[8vw] leading-none font-serif font-medium tracking-tighter text-zinc-900 mix-blend-multiply"
+                                    className="text-[10vw] lg:text-[8vw] leading-none font-serif font-light tracking-tighter text-zinc-500 mix-blend-multiply"
                                 >
                                     INTELLIGENCE
                                 </motion.h1>
@@ -118,8 +118,9 @@ export default function Hero() {
                             className="max-w-lg border-l-2 border-zinc-900 pl-6"
                         >
                             <h3 className="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-2">/ Mission Objective</h3>
-                            <p className="text-lg leading-relaxed text-zinc-800 font-sans">
-                                Shipping scalable systems, not just features. Latency &lt; 50ms.
+                            <p className="text-lg leading-relaxed text-zinc-800 font-sans font-medium">
+                                Building systems that <span className="bg-zinc-900 text-white px-1">actually work</span>.
+                                <br />Zero fluff. Pure throughput.
                             </p>
                         </motion.div>
                     </div>
@@ -138,55 +139,44 @@ export default function Hero() {
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.5, duration: 0.8 }}
-                            className="relative w-full max-w-[380px] bg-[#dedede] p-4 border border-zinc-900/10"
+                            className="relative w-full max-w-[380px] bg-[#e5e5e5] p-3 border border-zinc-900/20 shadow-2xl shadow-zinc-900/50"
                         >
                             {/* Card Frame */}
-                            <div className="absolute inset-0 border border-zinc-900/20"></div>
-                            {/* Corner Accents */}
-                            <div className="absolute -top-1 -left-1 w-3 h-3 border-t border-l border-zinc-900"></div>
-                            <div className="absolute -top-1 -right-1 w-3 h-3 border-t border-r border-zinc-900"></div>
-                            <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b border-l border-zinc-900"></div>
-                            <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b border-r border-zinc-900"></div>
+                            <div className="absolute inset-0 border border-zinc-900/100 pointer-events-none"></div>
 
                             {/* Inner Info */}
-                            <div className="relative z-10 space-y-4">
-                                {/* Header */}
-                                <div className="flex justify-between items-center border-b border-zinc-900/10 pb-2">
-                                    <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-500">Identity Module</span>
-                                    <div className="flex gap-1">
-                                        <div className="w-1.5 h-1.5 bg-zinc-900 rounded-full"></div>
-                                        <div className="w-1.5 h-1.5 bg-zinc-300 rounded-full"></div>
-                                        <div className="w-1.5 h-1.5 bg-zinc-300 rounded-full"></div>
-                                    </div>
-                                </div>
-
+                            <div className="relative z-10">
                                 {/* Photo Content */}
-                                <div className="relative aspect-[4/5] w-full bg-zinc-200 overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 group">
+                                <div className="relative aspect-[4/5] w-full bg-zinc-800 overflow-hidden group">
                                     {/* Overlay Lines */}
-                                    <div className="absolute inset-0 border border-zinc-900/5 m-2 pointer-events-none z-20"></div>
-                                    <div className="absolute bottom-4 right-4 text-[10px] font-mono text-white/80 z-20 mix-blend-difference">
-                                        ID: DNYANESH
-                                    </div>
+                                    <div className="absolute inset-0 border border-white/10 m-2 pointer-events-none z-20"></div>
 
                                     <img
                                         src="/hero.png"
                                         alt="Dnyanesh"
-                                        className="w-full h-full object-cover"
+                                        className="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
                                     />
+
+                                    {/* ANTI-WATERMARK BADGE */}
+                                    <div className="absolute bottom-0 right-0 z-30 bg-zinc-900 text-white px-3 py-1.5 flex items-center gap-2 border-t border-l border-zinc-500">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                                        <span className="text-[10px] font-mono font-bold tracking-wider leading-none">VERIFIED_OP</span>
+                                    </div>
 
                                     {/* Horizontal Scan Line */}
                                     <div className="absolute top-0 left-0 w-full h-[1px] bg-white/20 animate-scan-slow pointer-events-none z-20"></div>
                                 </div>
 
-                                {/* Footer Info */}
-                                <div className="grid grid-cols-2 gap-4 pt-2">
+                                {/* Minimal Footer */}
+                                <div className="pt-3 flex justify-between items-end border-t border-zinc-900 mt-3 border-dotted">
                                     <div>
-                                        <span className="text-[10px] font-mono text-zinc-400 uppercase block mb-1">Role</span>
-                                        <span className="text-sm font-bold text-zinc-900 block font-mono">Product Engineer</span>
+                                        <h2 className="text-2xl font-black font-sans text-zinc-900 leading-none">DNYANESH</h2>
+                                        <span className="text-[10px] font-mono text-zinc-500 uppercase block mt-1 tracking-widest">Operator Class</span>
                                     </div>
                                     <div className="text-right">
-                                        <span className="text-[10px] font-mono text-zinc-400 uppercase block mb-1">Status</span>
-                                        <span className="text-sm font-bold text-emerald-600 block font-mono animate-pulse">ONLINE</span>
+                                        <div className="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200">
+                                            ACTIVE
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -194,15 +184,15 @@ export default function Hero() {
                     </div>
                 </div>
 
-                {/* Bottom Tech Stack Strip */}
-                <div className="border-t border-zinc-900/10 mt-12 py-4 hidden md:flex justify-between items-center text-xs font-mono text-zinc-500">
-                    <div className="flex gap-8">
-                        <span>React Native</span>
-                        <span>LLM Engineering</span>
-                        <span>System Design</span>
+                {/* Bottom Rude Qualities Strip */}
+                <div className="border-t-2 border-zinc-900 mt-12 py-6 hidden md:flex justify-between items-center text-sm font-black font-mono text-zinc-900 uppercase tracking-tight">
+                    <div className="flex gap-12">
+                        <span className="hover:line-through decoration-emerald-500 cursor-cell transition-all">No Fluff</span>
+                        <span className="hover:line-through decoration-emerald-500 cursor-cell transition-all">Just Ship</span>
+                        <span className="hover:line-through decoration-emerald-500 cursor-cell transition-all">Zero Excuses</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                        <span>SCROLL TO INITIALIZE</span>
+                    <div className="flex items-center gap-2 text-zinc-400 font-normal text-xs normal-case tracking-normal">
+                        <span>Initialize System</span>
                         <ArrowDown className="w-3 h-3 animate-bounce" />
                     </div>
                 </div>
