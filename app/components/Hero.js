@@ -70,7 +70,7 @@ export default function Hero() {
                     {/* LEFT COLUMN: Main Typography & Mission */}
                     <div className="flex-1 flex flex-col justify-center relative">
                         {/* Title Group */}
-                        <div className="space-y-[-2vw] mb-12 relative z-20">
+                        <div className="space-y-2 mb-12 relative z-20">
                             <motion.div
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
@@ -86,9 +86,9 @@ export default function Hero() {
                                     initial={{ y: "100%" }}
                                     animate={{ y: 0 }}
                                     transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-                                    className="text-[10vw] lg:text-[8vw] leading-none font-sans font-black tracking-tighter text-zinc-900 mix-blend-multiply italic"
+                                    className="text-[6vw] lg:text-[5.5vw] leading-none font-sans font-black tracking-tighter text-zinc-900 mix-blend-multiply italic"
                                 >
-                                    ARCHITECTING
+                                    BUILDING SYSTEMS
                                 </motion.h1>
                             </div>
 
@@ -103,9 +103,9 @@ export default function Hero() {
                                     initial={{ y: "100%" }}
                                     animate={{ y: 0 }}
                                     transition={{ duration: 0.8, delay: 0.1, ease: [0.76, 0, 0.24, 1] }}
-                                    className="text-[10vw] lg:text-[8vw] leading-none font-serif font-light tracking-tighter text-zinc-500 mix-blend-multiply"
+                                    className="text-[6vw] lg:text-[5.5vw] leading-none font-serif font-light tracking-tighter text-zinc-500 mix-blend-multiply"
                                 >
-                                    INTELLIGENCE
+                                    THAT SHIP
                                 </motion.h1>
                             </div>
                         </div>
@@ -119,9 +119,10 @@ export default function Hero() {
                         >
                             <h3 className="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-2">/ Mission Objective</h3>
                             <p className="text-lg leading-relaxed text-zinc-800 font-sans font-medium">
-                                Building systems that <span className="bg-zinc-900 text-white px-1">actually work</span>.
-                                <br />Zero fluff. Pure throughput.
+                                Building systems that <span className="bg-zinc-900 text-white px-1">scale, fail gracefully, and recover</span>.
+                                <br />Focused on delivery, not demos.
                             </p>
+
                         </motion.div>
                     </div>
 
