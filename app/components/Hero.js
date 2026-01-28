@@ -55,10 +55,11 @@ export default function Hero() {
                     href="/resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center gap-2 px-4 py-2 bg-zinc-900 text-white text-xs font-mono uppercase tracking-wider hover:bg-zinc-800 transition-all shadow-lg shadow-zinc-900/20"
+                    className="group relative overflow-hidden flex items-center gap-2 px-6 py-2.5 bg-zinc-900 text-white text-xs font-bold font-mono uppercase tracking-wider hover:bg-zinc-800 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
                 >
-                    <FileText className="w-3 h-3" />
-                    Resume
+                    <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/0 via-emerald-500/50 to-emerald-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+                    <FileText className="w-4 h-4 text-emerald-400 group-hover:text-emerald-300 transition-colors" />
+                    <span className="relative z-10">Resume</span>
                 </a>
             </motion.div>
 
