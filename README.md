@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Dnyanesh Mulay – Developer Portfolio
 
-## Getting Started
+Welcome to my personal developer portfolio.
 
-First, run the development server:
+I am a cross-platform developer specializing in building scalable, user-focused mobile and web applications using modern technologies.
+
+This portfolio represents my practical work, technical depth, and real-world engineering experience.
+
+---
+
+## 🌍 Live Portfolio
+
+🔗 https://dany24.vercel.app
+
+---
+
+## 👨‍💻 About Me
+
+I am a B.Tech student specializing in cross-platform application development.
+
+Currently working as:
+
+**Software Engineering Intern – Hungy Corporation Inc (Canada)**  
+Focused on mobile application development and scalable frontend architecture.
+
+I build:
+- Production-ready mobile & web applications
+- Secure backend-integrated systems
+- Real-world problem-solving products
+- Structured and maintainable codebases
+
+I care about architecture, not just UI.
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React
+- React Native
+- JavaScript
+- Tailwind CSS
+- Framer Motion
+
+### Backend & Infrastructure
+- Supabase
+- PostgreSQL
+- REST APIs
+- Authentication & Role-Based Access Control
+- Secure Storage Handling (Signed URLs)
+
+### Tools & Workflow
+- Git & GitHub
+- VS Code
+- Postman
+- Expo
+- Figma (UI referencing & design planning)
+
+---
+
+## 📂 Featured Projects
+
+### 📌 Report It – Cross-Platform Report Management System
+Secure mobile + web reporting platform with:
+- Private storage buckets
+- Signed URL image rendering
+- Role-based access control
+- Admin workflow management
+- Database + Storage consistency handling
+
+---
+
+### 🌾 Kisan-AI – Agriculture Assistance App
+Mobile application designed to help farmers by:
+- Detecting crop diseases from images
+- Suggesting treatments
+- Providing fertilizer scheduling insights
+- Offering agriculture-focused solutions
+
+---
+
+### ⚖️ Advocate Diary
+Case & reminder management system featuring:
+- Calendar integration
+- Reminder scheduling
+- Migration from local storage to Supabase backend
+- Clean state management architecture
+
+---
+
+## 🧠 Engineering Focus
+
+What differentiates my work:
+
+- I design proper database schemas
+- I implement strict RLS security policies
+- I handle secure file storage systems
+- I understand production constraints
+- I build scalable structures, not demo apps
+
+---
+
+## 📊 Portfolio Features
+
+- Fully responsive (Mobile-first approach)
+- Dark / Light mode support
+- Smooth UI animations using Framer Motion
+- Clean component architecture
+- Performance-focused structure
+
+---
+
+## ⚙️ Installation
 
 ```bash
+git clone https://github.com/your-username/portfolio.git
+cd portfolio
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
